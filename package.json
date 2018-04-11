@@ -1,15 +1,15 @@
 {
-  "name": "@source4society/yourcomponentname",
+  "name": "@source4society/react-scepter-redux-form-decorator",
   "version": "1.0.0",
-  "description": "Add your description here",
+  "description": "Decorator to hook up form presentation components to a redux-form handler",
   "main": "lib/index.js",
-  "repository": "https://github.com/source4societyorg/yourrepository.git",
+  "repository": "https://github.com/source4societyorg/react-scepter-redux-form-decorator.git",
   "author": "Source 4 Society",
   "license": "AGPL-3.0",
   "private": false,
   "scripts": {
     "test": "eslint ./src/*.js ./tests/*.js && jest --coverage",
-    "build": "babel src/index.js --minified --out-file lib/index.js",
+    "build": "babel src/index.js --minified --out-file lib/index.js && babel src/props.js --minified --out-file lib/props.js && babel src/actions.js --minified --out-file lib/actions.js && babel src/constants.js --minified --out-file lib/constants.js",
     "prepublish": "npm run build"
   },
   "jest": {
@@ -42,12 +42,16 @@
   },
   "dependencies": {
     "@source4society/scepter-utility-lib": "^1.1.0",
+    "@source4society/scepter-validation-lib": "^1.1.0",
     "immutable": "3.8.1",
     "moment": "^2.20.1",
     "react": "15.6.1",
     "react-dom": "15.6.1",
+    "react-redux": "^5.0.7",
     "react-router-dom": "4.1.1",
     "react-test-renderer": "15.6.1",
+    "redux": "^3.7.2",
+    "redux-form": "^7.3.0",
     "redux-saga": "^0.16.0",
     "reselect": "3.0.1"
   },
